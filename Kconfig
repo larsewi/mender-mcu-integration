@@ -1,17 +1,14 @@
-#  Copyright (c) 2020 Gerson Fernando Budke <nandojve@gmail.com>
-#  SPDX-License-Identifier: Apache-2.0
+mainmenu "Mender App"
 
-mainmenu "TagoIO IoT Cloud Platform (HTTP Post) Client Configuration"
-
-menu "TagoIO IoT Cloud Configuration"
+menu "Mender App WIFI Configuration"
 
 if WIFI
 
-config TAGOIO_HTTP_WIFI_SSID
+config MENDER_APP_WIFI_SSID
 	string "WIFI SSID - Network name"
 	default "my_network"
 
-config TAGOIO_HTTP_WIFI_PSK
+config MENDER_APP_WIFI_PSK
 	string "WIFI PSK - Network password key"
 	default "secret_passwd"
 

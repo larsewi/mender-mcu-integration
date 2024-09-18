@@ -79,8 +79,6 @@ main(void) {
 
     wifi_connect();
 
-    printf("I'm struck\n");
-
     netup_wait_for_network();
 
     netup_get_mac_address(mender_identity.value);
