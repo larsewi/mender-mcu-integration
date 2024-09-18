@@ -1,0 +1,22 @@
+#  Copyright (c) 2020 Gerson Fernando Budke <nandojve@gmail.com>
+#  SPDX-License-Identifier: Apache-2.0
+
+mainmenu "TagoIO IoT Cloud Platform (HTTP Post) Client Configuration"
+
+menu "TagoIO IoT Cloud Configuration"
+
+if WIFI
+
+config TAGOIO_HTTP_WIFI_SSID
+	string "WIFI SSID - Network name"
+	default "my_network"
+
+config TAGOIO_HTTP_WIFI_PSK
+	string "WIFI PSK - Network password key"
+	default "secret_passwd"
+
+endif # WIFI
+
+endmenu
+
+source "Kconfig.zephyr"

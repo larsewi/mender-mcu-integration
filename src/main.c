@@ -16,6 +16,7 @@
 LOG_MODULE_REGISTER(mender_app, LOG_LEVEL_DBG);
 
 #include "netup.h"
+#include "wifi.h"
 #include "certs.h"
 
 #include <zephyr/kernel.h>
@@ -75,6 +76,10 @@ get_identity_cb(mender_identity_t **identity) {
 int
 main(void) {
     printf("Hello World! %s\n", CONFIG_BOARD_TARGET);
+
+    wifi_connect();
+
+    printf("I'm struck\n");
 
     netup_wait_for_network();
 

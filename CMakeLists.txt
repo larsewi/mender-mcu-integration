@@ -6,6 +6,7 @@ project(mender-mcu-integration)
 
 target_sources(app PRIVATE
     src/main.c
+    src/wifi.c
     src/netup.c
     src/certs.c
 )
